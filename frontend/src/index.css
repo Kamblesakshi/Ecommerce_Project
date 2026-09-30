@@ -1,0 +1,225 @@
+/* ================================
+   Global Reset
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  line-height: 1.6;
+}
+
+/* ================================
+   React Root
+================================ */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================================
+   Main Typography
+================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #212529;
+  font-weight: 600;
+}
+
+h1 {
+  letter-spacing: -0.5px;
+}
+
+p {
+  margin-bottom: 0.75rem;
+}
+
+/* ================================
+   Navbar
+================================ */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  letter-spacing: 0.3px;
+}
+
+.navbar .nav-link {
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+  opacity: 0.8;
+}
+
+.navbar .nav-link.active {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+/* ================================
+   Buttons
+================================ */
+
+.btn {
+  border-radius: 8px;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* ================================
+   Cards
+================================ */
+
+.card {
+  border-radius: 12px;
+  border: 1px solid #dee2e6;
+}
+
+.shadow-sm {
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.06) !important;
+}
+
+.card-img-top {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* ================================
+   Product Cards
+================================ */
+
+.product-image {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  padding: 20px;
+}
+
+/* ================================
+   Form Controls
+================================ */
+
+.form-control,
+.form-select {
+  border-radius: 8px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+/* ================================
+   Links
+================================ */
+
+a {
+  text-decoration: none;
+}
+
+/* ================================
+   Images
+================================ */
+
+img {
+  max-width: 100%;
+}
+
+/* ================================
+   Footer
+================================ */
+
+footer {
+  margin-top: auto;
+}
+
+/* ================================
+   Mobile Responsive
+================================ */
+
+@media (max-width: 991.98px) {
+  .navbar .navbar-nav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .navbar .nav-link {
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .product-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+  }
+}
